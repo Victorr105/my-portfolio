@@ -1,0 +1,710 @@
+/* styles.css */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background-color: rgba(231, 227, 227, 0.817);
+}
+header {
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  background-color: black;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  line-height: 40px;
+  color: white;
+}
+
+nav ul li a:hover {
+  color: f08b0f;
+  cursor: pointer;
+  transition: 0.5s;
+  text-decoration: underline;
+}
+
+/* profile */
+.profileContainer {
+  height: 85vh;
+  background-color: black;
+  padding-top: 15%;
+}
+.subProfileContainer {
+  display: flex;
+  justify-content: center;
+  /* background-color: pink; */
+  margin-top: 0%;
+}
+/* article */
+article {
+  float: left;
+  width: 38%;
+  /* background-color: blue; */
+}
+
+.articleSalutation {
+  font-size: 1.6rem;
+  color: f08b0f;
+}
+.articleName {
+  font-size: 4.9rem;
+  color: #fff;
+  padding: 10px 0px;
+}
+.articleProffesion {
+  font-size: 1.6em;
+  color: #fff;
+  padding: 10px 0px;
+}
+
+.articleContent {
+  padding: 10px 0px;
+  font-size: 1.2rem;
+  color: rgb(160, 159, 159);
+}
+/* aside */
+aside {
+  float: right;
+  width: 52%;
+  /* background-color: purple; */
+}
+
+.asideProfile {
+  width: 350px;
+  height: 350px;
+  float: right;
+  margin: 0px 150px 0px 0px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #f08b0f;
+  box-shadow: 0 3px 20px #f08b0f;
+}
+
+.articleLinks {
+  display: flex;
+  gap: 3%;
+  padding-left: 3%;
+  padding-top: 2%;
+}
+
+.articleLinks button {
+  width: 140px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+#articleBtns1 {
+  background-color: orange;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+#articleBtns1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#articleBtns2 {
+  background-color: black;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+#articleBtns2:hover {
+  background-color: black;
+  color: orange;
+  border: 1px solid orange;
+  transition: 0.2s;
+}
+#articleBtns2 a {
+  color: #fff;
+  text-decoration: none;
+}
+#articleBtns2 a:hover {
+  color: #f08b0f;
+  text-decoration: none;
+}
+
+/* about */
+#about {
+  height: 90vh;
+}
+.aboutContainer {
+  padding-top: 4%;
+}
+.aboutTitle {
+  text-align: center;
+  font-size: 3.2rem;
+  font-family: cursive;
+}
+
+.cardContainer {
+  max-width: 60%;
+  margin: auto;
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 40px;
+  margin-top: 30px;
+  box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.234);
+}
+
+.aboutHeadings {
+  padding: 10px 0px;
+  font-size: 2rem;
+  color: #f08b0f;
+}
+
+.aboutContent {
+  padding: 10px 0;
+}
+/* projects */
+.projectsContainer {
+  background-color: #fff;
+  height: 90vh;
+}
+.projectsTitle {
+  text-align: center;
+  font-size: 3.2rem;
+  font-family: cursive;
+}
+.projectsDisclaimer {
+  text-align: center;
+  padding: 20px;
+  color: #f08b0f;
+}
+.projectsCardContainer {
+  padding-top: 10%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.underConstruction {
+  width: 220px;
+}
+
+/* Contact */
+.contactContainer {
+  height: 60vh;
+}
+.contactTitle {
+  text-align: center;
+  font-size: 3.2rem;
+  font-family: cursive;
+}
+.collaborationText {
+  text-align: center;
+  padding: 30px 30px 0px 30px;
+}
+.contactCardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* background-color: green; */
+  padding-top: 100px;
+}
+
+.contactCard {
+  width: 15%;
+  height: 30%;
+  background-color: #fff;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.contactCardTitle {
+  padding-top: 10px;
+  font-size: 1.2rem;
+  color: #f08b0f;
+}
+
+.contactCardText {
+  padding-top: 6px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.icon {
+  width: 40px;
+  cursor: pointer;
+}
+
+/* footer */
+
+.footer {
+  background-color: black;
+  color: #fff;
+  height: 60px;
+}
+
+footer p {
+  text-align: center;
+  line-height: 60px;
+}
+
+/* Responsiveness */
+
+/* larger screens */
+@media (max-width: 1200px) {
+  .articleName {
+    font-size: 3.8rem;
+  }
+
+  .articleProffesion {
+    font-size: 1.4rem;
+  }
+
+  .asideProfile {
+    width: 300px;
+    height: 300px;
+    margin: 0px 80px 0px 0px;
+  }
+
+  .cardContainer {
+    max-width: 75%;
+  }
+}
+/* laptops*/
+@media (max-width: 992px) {
+  .profileContainer {
+    height: auto;
+    padding-top: 20%;
+    padding-bottom: 8%;
+  }
+  article {
+    width: 45%;
+    padding-left: 4%;
+  }
+  aside {
+    width: 45%;
+  }
+  .articleName {
+    font-size: 3rem;
+  }
+  .articleSalutation {
+    font-size: 1.3rem;
+  }
+  .articleProffesion {
+    font-size: 1.2rem;
+  }
+  .articleContent {
+    font-size: 1rem;
+  }
+  .asideProfile {
+    width: 250px;
+    height: 250px;
+    margin: 0px 30px 0px 0px;
+  }
+
+  /* about */
+  .aboutTitle,
+  .projectsTitle,
+  .contactTitle {
+    font-size: 2.6rem;
+  }
+
+  #about {
+    height: auto;
+    padding-bottom: 6%;
+  }
+
+  .cardContainer {
+    max-width: 85%;
+    padding: 40px;
+  }
+
+  .aboutHeadings {
+    font-size: 1.7rem;
+  }
+
+  .projectsContainer {
+    height: auto;
+    padding-bottom: 8%;
+  }
+
+  .contactContainer {
+    height: auto;
+    padding-bottom: 6%;
+  }
+
+  .contactCard {
+    width: 22%;
+    padding: 40px;
+  }
+}
+/* tablets*/
+@media (max-width: 768px) {
+  nav ul {
+    gap: 6%;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  .profileContainer {
+    padding-top: 25%;
+  }
+
+  .subProfileContainer {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  /* article */
+
+  article {
+    float: none;
+    width: 85%;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  aside {
+    float: none;
+    width: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .asideProfile {
+    float: none;
+    margin: 0px;
+    width: 220px;
+    height: 220px;
+  }
+
+  .articleName {
+    font-size: 2.6rem;
+  }
+
+  .articleSalutation {
+    font-size: 1.2rem;
+  }
+
+  .articleProffesion {
+    font-size: 1.1rem;
+  }
+
+  .articleContent {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .articleLinks {
+    justify-content: center;
+    padding-left: 0;
+    padding-top: 5%;
+    gap: 4%;
+  }
+
+  .articleLinks button {
+    width: 130px;
+    height: 45px;
+  }
+  /* about */
+  .aboutTitle,
+  .projectsTitle,
+  .contactTitle {
+    font-size: 2.2rem;
+  }
+
+  .cardContainer {
+    max-width: 90%;
+    padding: 30px;
+    border-radius: 25px;
+  }
+
+  .aboutHeadings {
+    font-size: 1.5rem;
+  }
+
+  .collaborationText {
+    padding: 20px 20px 0px 20px;
+    font-size: 0.95rem;
+  }
+
+  .contactCardContainer {
+    padding-top: 60px;
+    flex-wrap: wrap;
+  }
+
+  .contactCard {
+    width: 28%;
+    padding: 30px;
+  }
+
+  .underConstruction {
+    width: 180px;
+  }
+}
+
+/* small phones */
+@media (max-width: 575px) {
+  nav ul {
+    gap: 4%;
+  }
+  nav ul li a {
+    font-size: 0.8rem;
+    line-height: 50px;
+  }
+
+  .profileContainer {
+    padding-top: 30%;
+    padding-bottom: 10%;
+  }
+
+  .articleName {
+    font-size: 2rem;
+    padding: 6px 0px;
+  }
+
+  .articleSalutation {
+    font-size: 1rem;
+  }
+
+  .articleProffesion {
+    font-size: 1rem;
+    padding: 6px 0px;
+  }
+
+  .articleContent {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .asideProfile {
+    width: 170px;
+    height: 170px;
+  }
+
+  .articleLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 8%;
+  }
+
+  .articleLinks button {
+    width: 160px;
+    height: 45px;
+  }
+  /* about */
+
+  .aboutTitle,
+  .projectsTitle,
+  .contactTitle {
+    font-size: 1.8rem;
+  }
+
+  .cardContainer {
+    max-width: 92%;
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .aboutHeadings {
+    font-size: 1.3rem;
+  }
+
+  .aboutContent,
+  .AboutContent {
+    font-size: 0.9rem;
+  }
+
+  .projectsDisclaimer {
+    font-size: 0.9rem;
+    padding: 14px;
+  }
+
+  .underConstruction {
+    width: 140px;
+  }
+  /* comtact */
+
+  .collaborationText {
+    font-size: 0.85rem;
+    padding: 14px 14px 0px 14px;
+  }
+
+  .contactCardContainer {
+    padding-top: 40px;
+    gap: 12px;
+  }
+
+  .contactCard {
+    width: 28%;
+    padding: 18px;
+  }
+
+  .contactCardTitle {
+    font-size: 1rem;
+  }
+
+  .contactCardText {
+    font-size: 0.75rem;
+  }
+
+  .icon {
+    width: 30px;
+  }
+  /* footer */
+
+  .footer {
+    height: auto;
+  }
+
+  footer p {
+    line-height: 1.5;
+    padding: 18px 10px;
+    font-size: 0.85rem;
+  }
+}
+/* smaller screens */
+@media (max-width: 320px) {
+  nav ul {
+    gap: 2%;
+  }
+
+  nav ul li a {
+    font-size: 0.7rem;
+    line-height: 50px;
+  }
+
+  .profileContainer {
+    padding-top: 35%;
+    padding-bottom: 12%;
+  }
+
+  .articleSalutation {
+    font-size: 0.85rem;
+  }
+  /* article */
+  .articleName {
+    font-size: 1.6rem;
+    padding: 4px 0px;
+  }
+
+  .articleProffesion {
+    font-size: 0.85rem;
+    padding: 4px 0px;
+  }
+
+  .articleContent {
+    font-size: 0.78rem;
+    padding: 6px 8px;
+  }
+  /* aside */
+
+  .asideProfile {
+    width: 140px;
+    height: 140px;
+  }
+
+  .articleLinks {
+    gap: 8px;
+    padding-top: 10%;
+  }
+
+  .articleLinks button {
+    width: 140px;
+    height: 42px;
+  }
+  /* about */
+  .aboutTitle,
+  .projectsTitle,
+  .contactTitle {
+    font-size: 1.5rem;
+  }
+
+  .cardContainer {
+    max-width: 95%;
+    padding: 16px;
+    border-radius: 15px;
+  }
+
+  .aboutHeadings {
+    font-size: 1.1rem;
+    padding-left: 10px;
+  }
+
+  .aboutContent,
+  .AboutContent {
+    font-size: 0.8rem;
+  }
+  /* project */
+
+  .projectsDisclaimer {
+    font-size: 0.78rem;
+    padding: 10px;
+  }
+
+  .underConstruction {
+    width: 110px;
+  }
+  /* contact */
+  .collaborationText {
+    font-size: 0.75rem;
+    padding: 10px 10px 0px 10px;
+  }
+
+  .contactCardContainer {
+    padding-top: 30px;
+    gap: 8px;
+  }
+
+  .contactCard {
+    width: 30%;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .contactCardTitle {
+    font-size: 0.85rem;
+    padding-top: 6px;
+  }
+
+  .contactCardText {
+    font-size: 0.65rem;
+    padding-top: 3px;
+  }
+
+  .icon {
+    width: 24px;
+  }
+  /* footer */
+  .footer {
+    height: auto;
+  }
+  footer p {
+    font-size: 0.75rem;
+    padding: 14px 8px;
+    line-height: 1.4;
+  }
+}
