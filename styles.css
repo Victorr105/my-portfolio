@@ -148,7 +148,8 @@ aside {
 
 /* about */
 #about {
-  height: 90vh;
+  height: auto;
+  min-height: 90vh;
 }
 .aboutContainer {
   padding-top: 4%;
@@ -185,7 +186,9 @@ aside {
 
 /* Contact */
 .contactContainer {
-  height: 60vh;
+  height: auto;
+  min-height: 60vh;
+  padding-bottom: 40px;
 }
 .contactTitle {
   text-align: center;
@@ -203,6 +206,7 @@ aside {
   gap: 20px;
   /* background-color: green; */
   padding-top: 100px;
+  flex-wrap: wrap;
 }
 
 .contactCard {
@@ -740,11 +744,7 @@ footer p {
   text-align: center;
 }
 
-/* =========================================================== */
-/* ===== APPENDED: skills page, projects & services styles ==== */
-/* =========================================================== */
-
-/* --- skills section extras --- */
+/* skills section */
 .skillTitle{
   padding-top: 30px;
   font-size: 3.2rem;
@@ -785,7 +785,7 @@ footer p {
   padding-top: 4px;
 }
 
-/* --- projects section --- */
+/* projects section */
 #projects{
   height: auto;
   padding-bottom: 6%;
@@ -860,8 +860,8 @@ footer p {
   color: #f08b0f;
   border: 1px solid #f08b0f;
 }
-
-/* --- services section --- */
+/*  */
+/* serviceSsection */
 #services{
   background-color: #fff;
   padding: 50px 20px;
@@ -911,7 +911,6 @@ footer p {
   line-height: 1.5;
 }
 
-/* --- responsive overrides for the new sections --- */
 
 @media (max-width: 992px){
   .skillCard{
@@ -1027,4 +1026,146 @@ footer p {
     font-size: 1.05rem;
   }
 }
+/* contact form */
+.contactFormContainer{
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px 0px 20px;
+}
 
+.contactFormContainer > div{
+  width: 100%;
+  max-width: 520px;
+}
+
+#contactForm{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 3px 25px rgba(240, 139, 15, 0.15);
+}
+
+#contactForm label{
+  color: #fff;
+  font-size: 0.95rem;
+  padding-top: 8px;
+}
+
+#contactForm input,
+#contactForm textarea{
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: black;
+  border: 1px solid #444;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder{
+  color: #777;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus{
+  border-color: #f08b0f;
+  box-shadow: 0 0 8px rgba(240, 139, 15, 0.5);
+}
+
+#contactForm textarea{
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contactSubmitBtn{
+  margin-top: 16px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #f08b0f;
+  border: 1px solid #f08b0f;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contactSubmitBtn:hover{
+  background-color: black;
+  color: #f08b0f;
+}
+
+.formError{
+  color: #ff4d4d;
+  font-size: 0.82rem;
+  padding-top: 4px;
+  min-height: 16px;
+}
+
+.formSuccess{
+  text-align: center;
+  color: #3ddc84;
+  font-size: 0.95rem;
+  min-height: 20px;
+  padding-top: 6px;
+}
+
+@media (max-width: 768px){
+  .contactFormContainer{
+    padding: 30px 16px 0px 16px;
+  }
+  #contactForm{
+    padding: 24px;
+  }
+}
+
+@media (max-width: 575px){
+  .contactFormContainer{
+    padding: 24px 12px 0px 12px;
+  }
+  #contactForm{
+    padding: 20px;
+    gap: 4px;
+  }
+  #contactForm input,
+  #contactForm textarea{
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+  .contactSubmitBtn{
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 320px){
+  .contactFormContainer{
+    padding: 20px 8px 0px 8px;
+  }
+  #contactForm{
+    padding: 16px;
+    border-radius: 14px;
+  }
+  #contactForm label{
+    font-size: 0.85rem;
+  }
+  #contactForm input,
+  #contactForm textarea{
+    font-size: 0.85rem;
+    padding: 9px 10px;
+  }
+  .formError{
+    font-size: 0.72rem;
+  }
+  .contactSubmitBtn{
+    font-size: 0.88rem;
+    padding: 10px;
+  }
+}

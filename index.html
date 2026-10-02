@@ -109,19 +109,46 @@
           <p class="collaborationText">
             You can also call text me on my whatsapp number
           </p>
+
           <div class="contactFormContainer">
             <div>
-              <form action="">
-                <label for="">Name<sup class="super">*</sup></label>
-                <input type="text" value="" placeholder="Enter Your Full Names" >
-                <label for="">Phone<sup class="super">*</sup></label>
-                <input type="text" placeholder=" +254...." required>
-                <label for="">Message <sup class="super">*</sup></label>
-                <textarea name="" id=""></textarea>
-                
+              <form id="contactForm" novalidate>
+                <label for="contactName">Name<sup class="super">*</sup></label>
+                <input
+                  type="text"
+                  id="contactName"
+                  name="contactName"
+                  placeholder="Enter Your Full Names"
+                  required
+                  minlength="3"
+                  pattern="[A-Za-z\s'-]+"
+                />
+                <span class="formError" id="contactNameError"></span>
+
+                <label for="contactEmail">Email<sup class="super">*</sup></label>
+                <input
+                  type="email"
+                  id="contactEmail"
+                  name="contactEmail"
+                  placeholder="you@example.com"
+                  required
+                />
+                <span class="formError" id="contactEmailError"></span>
+
+                <label for="contactMessage">Message<sup class="super">*</sup></label>
+                <textarea
+                  id="contactMessage"
+                  name="contactMessage"
+                  placeholder="Write your message here..."
+                  required
+                  minlength="10"
+                ></textarea>
+                <span class="formError" id="contactMessageError"></span>
+
+                <button type="submit" class="contactSubmitBtn">Send Message</button>
+                <p class="formSuccess" id="contactSuccess"></p>
               </form>
             </div>
-
           </div>
 
           <div class="contactCardContainer">
@@ -153,5 +180,64 @@
         <p>@2026 Njoroge Victor.All rights reserved.</p>
       </footer>
     </main>
+
+    <script>
+      /* --- contact form: native HTML validation + minimal JS for inline errors --- */
+      const contactForm = document.getElementById("contactForm");
+      const contactName = document.getElementById("contactName");
+      const contactEmail = document.getElementById("contactEmail");
+      const contactMessage = document.getElementById("contactMessage");
+
+      const contactNameError = document.getElementById("contactNameError");
+      const contactEmailError = document.getElementById("contactEmailError");
+      const contactMessageError = document.getElementById("contactMessageError");
+      const contactSuccess = document.getElementById("contactSuccess");
+
+      function clearFormErrors() {
+        contactNameError.textContent = "";
+        contactEmailError.textContent = "";
+        contactMessageError.textContent = "";
+        contactSuccess.textContent = "";
+      }
+
+      contactName.addEventListener("input", () => {
+        contactNameError.textContent = contactName.validity.valid
+          ? ""
+          : "Enter a valid name (letters only, min 3 characters).";
+      });
+
+      contactEmail.addEventListener("input", () => {
+        contactEmailError.textContent = contactEmail.validity.valid
+          ? ""
+          : "Enter a valid email address.";
+      });
+
+      contactMessage.addEventListener("input", () => {
+        contactMessageError.textContent = contactMessage.validity.valid
+          ? ""
+          : "Message must be at least 10 characters long.";
+      });
+
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        clearFormErrors();
+
+        /* Let native HTML validation do the heavy lifting */
+        const nativeValid = contactForm.checkValidity();
+
+        /* Surface native errors inline since we disabled browser popups */
+        if (!contactName.validity.valid)
+          contactNameError.textContent = "Enter a valid name (letters only, min 3 characters).";
+        if (!contactEmail.validity.valid)
+          contactEmailError.textContent = "Enter a valid email address.";
+        if (!contactMessage.validity.valid)
+          contactMessageError.textContent = "Message must be at least 10 characters long.";
+
+        if (nativeValid) {
+          contactSuccess.textContent = "Message sent successfully!";
+          contactForm.reset();
+        }
+      });
+    </script>
   </body>
 </html>
