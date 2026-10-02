@@ -182,7 +182,9 @@
     </main>
 
     <script>
-      /* --- contact form: native HTML validation + minimal JS for inline errors --- */
+
+
+      /*  contact form validation */
       const contactForm = document.getElementById("contactForm");
       const contactName = document.getElementById("contactName");
       const contactEmail = document.getElementById("contactEmail");
@@ -222,10 +224,10 @@
         e.preventDefault();
         clearFormErrors();
 
-        /* Let native HTML validation do the heavy lifting */
+        /* checking activity, html*/
         const nativeValid = contactForm.checkValidity();
 
-        /* Surface native errors inline since we disabled browser popups */
+        /*  */
         if (!contactName.validity.valid)
           contactNameError.textContent = "Enter a valid name (letters only, min 3 characters).";
         if (!contactEmail.validity.valid)
