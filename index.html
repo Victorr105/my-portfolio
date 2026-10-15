@@ -38,12 +38,15 @@
                 useful digital products.
               </p>
               <div class="articleLinks">
-                <button type="button" class="articleBtns" id="articleBtns1">
+                <button type="button" class="articleBtns" id="articleBtns2">
                   <a href="projects"> View Projects</a>
                   
                 </button>
-                <button type="button" class="articleBtns" id="articleBtns2">
+                <button type="button" class="articleBtns" id="articleBtns1">
                   <a href="#contact">Contact me</a>
+                </button>
+                 <button type="button" class="articleBtns" id="articleBtns2">
+                  <a href="#contact">Test API</a>
                 </button>
               </div>
             </article>
@@ -55,7 +58,15 @@
               />
             </aside>
           </div>
+           <div style="color: white;">
+        <h1>Your Motivation</h1>
+
+        <p id="quote">Loading your motivational quote...</p>
+        <p id="author"></p>
+           
         </div>
+        </div>
+       
       </section>
 
 
@@ -176,14 +187,15 @@
           </div>
         </div>
       </section>
+      <!-- footer section -->
       <footer class="footer">
         <p>@2026 Njoroge Victor.All rights reserved.</p>
       </footer>
     </main>
+    <script type="module" src="script1.js">
 
-    <script>
-
-
+    </script>
+    <script >
       /*  contact form validation */
       const contactForm = document.getElementById("contactForm");
       const contactName = document.getElementById("contactName");
@@ -240,6 +252,8 @@
           contactForm.reset();
         }
       });
+      // start of the api section
+
     </script>
   </body>
 </html>

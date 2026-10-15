@@ -1169,3 +1169,12 @@ footer p {
     padding: 10px;
   }
 }
+
+.testApiTitle{
+  text-align: center;
+  font-size: 3.2rem;
+  font-family: cursive;
+}
+.apiHr{
+  background-color: #f08b0f;
+}
