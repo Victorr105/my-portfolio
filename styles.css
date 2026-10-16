@@ -1178,3 +1178,85 @@ footer p {
 .apiHr{
   background-color: #f08b0f;
 }
+
+.quoteContainer{
+  max-width: 700px;
+  margin: 40px auto 0;
+  padding: 24px 28px;
+  background-color: black;
+  border: 1px solid #f08b0f;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 3px 20px rgba(240, 139, 15, 0.15);
+}
+
+.quoteHeading{
+  color: #f08b0f;
+  font-size: 1.6rem;
+  font-family: cursive;
+  padding-bottom: 12px;
+}
+
+.quoteText{
+  color: #fff;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  font-style: italic;
+  min-height: 60px;
+  transition: 0.3s;
+}
+
+.quoteAuthor{
+  color: rgb(180, 180, 180);
+  font-size: 0.95rem;
+  padding-top: 12px;
+  min-height: 20px;
+}
+
+@media (max-width: 768px){
+  .quoteContainer{
+    padding: 20px;
+    margin: 30px 16px 0;
+  }
+  .quoteHeading{
+    font-size: 1.4rem;
+  }
+  .quoteText{
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 575px){
+  .quoteContainer{
+    padding: 16px;
+    margin: 24px 12px 0;
+    border-radius: 15px;
+  }
+  .quoteHeading{
+    font-size: 1.2rem;
+  }
+  .quoteText{
+    font-size: 0.95rem;
+    min-height: 50px;
+  }
+  .quoteAuthor{
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 320px){
+  .quoteContainer{
+    padding: 12px;
+    margin: 20px 8px 0;
+    border-radius: 12px;
+  }
+  .quoteHeading{
+    font-size: 1rem;
+  }
+  .quoteText{
+    font-size: 0.85rem;
+  }
+  .quoteAuthor{
+    font-size: 0.75rem;
+  }
+}

@@ -23,7 +23,6 @@
     <main>
       <section id="heroSection">
 
-
         <!-- profile -->
         <div class="profileContainer">
           <div class="subProfileContainer">
@@ -40,13 +39,9 @@
               <div class="articleLinks">
                 <button type="button" class="articleBtns" id="articleBtns2">
                   <a href="projects"> View Projects</a>
-                  
                 </button>
                 <button type="button" class="articleBtns" id="articleBtns1">
                   <a href="#contact">Contact me</a>
-                </button>
-                 <button type="button" class="articleBtns" id="articleBtns2">
-                  <a href="#contact">Test API</a>
                 </button>
               </div>
             </article>
@@ -55,20 +50,20 @@
                 class="asideProfile"
                 src="images/pfp3.jpeg"
                 alt="Njoroge Victor"
+                loading="lazy"
               />
             </aside>
           </div>
-           <div style="color: white;">
-        <h1>Your Motivation</h1>
 
-        <p id="quote">Loading your motivational quote...</p>
-        <p id="author"></p>
-           
+          <!-- quote of the day -->
+          <div class="quoteContainer">
+            <h3 class="quoteHeading">Your Motivation</h3>
+            <p id="quote" class="quoteText"></p>
+            <p id="author" class="quoteAuthor"></p>
+          </div>
+
         </div>
-        </div>
-       
       </section>
-
 
       <!-- ABOUT ME -->
       <section id="about">
@@ -91,16 +86,13 @@
               frontend and backend development.
             </p>
 
-
             <!-- education -->
             <h2 class="aboutHeadings">Education</h2>
             <p class="AboutContent">
               I’m currently pursuing a Bachelor of Science degree, where I’m
               building a strong foundation in computer technology, programming,
               and software development. My studies are helping me understand how
-
               technology can be used to solve real-world problems and create
-
               useful digital solutions. Alongside my academic journey, I
               continue to improve my practical skills through personal projects,
               coding practice, and exploring different technologies. I’m
@@ -109,6 +101,7 @@
           </div>
         </div>
       </section>
+
       <!-- Contact -->
       <section id="contact">
         <div class="contactContainer">
@@ -165,38 +158,40 @@
           <div class="contactCardContainer">
             <div class="contactCard">
               <a href="mailto:njorogevictorr@gmail.com">
-                <img class="icon" src="icons/email.png" alt=""/>
+                <img class="icon" src="icons/email.png" alt="" loading="lazy" />
               </a>
               <h3 class="contactCardTitle">Email</h3>
               <p class="contactCardText">Drop me a message anytime</p>
             </div>
             <div class="contactCard">
               <a href="https://github.com/Victorr105/my-portfolio">
-                <img class="icon" src="icons/github.png" alt="" />
+                <img class="icon" src="icons/github.png" alt="" loading="lazy" />
               </a>
               <h3 class="contactCardTitle">GitHub</h3>
               <p class="contactCardText">Check out my code & projects</p>
             </div>
             <div class="contactCard">
               <a href="https://www.linkedin.com/in/victor-njoroge-260678354">
-                <img class="icon" src="icons/linkedin (1).png" alt=""
-              /></a>
+                <img class="icon" src="icons/linkedin (1).png" alt="" loading="lazy" />
+              </a>
               <h3 class="contactCardTitle">LinkedIn</h3>
               <p class="contactCardText">Let's connect professionally</p>
             </div>
           </div>
         </div>
       </section>
+
       <!-- footer section -->
       <footer class="footer">
         <p>@2026 Njoroge Victor.All rights reserved.</p>
       </footer>
     </main>
-    <script type="module" src="script1.js">
 
-    </script>
-    <script >
-      /*  contact form validation */
+    <!-- quote fetcher runs in the browser -->
+    <script src="script1.js"></script>
+
+    <!-- contact form validation -->
+    <script>
       const contactForm = document.getElementById("contactForm");
       const contactName = document.getElementById("contactName");
       const contactEmail = document.getElementById("contactEmail");
@@ -236,24 +231,22 @@
         e.preventDefault();
         clearFormErrors();
 
-        /* checking activity, html*/
         const nativeValid = contactForm.checkValidity();
 
-        /*  */
         if (!contactName.validity.valid)
-          contactNameError.textContent = "Enter a valid name (letters only, min 3 characters).";
+          contactNameError.textContent =
+            "Enter a valid name (letters only, min 3 characters).";
         if (!contactEmail.validity.valid)
           contactEmailError.textContent = "Enter a valid email address.";
         if (!contactMessage.validity.valid)
-          contactMessageError.textContent = "Message must be at least 10 characters long.";
+          contactMessageError.textContent =
+            "Message must be at least 10 characters long.";
 
         if (nativeValid) {
           contactSuccess.textContent = "Message sent successfully!";
           contactForm.reset();
         }
       });
-      // start of the api section
-
     </script>
   </body>
 </html>
